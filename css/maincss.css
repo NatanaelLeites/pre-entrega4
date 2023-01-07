@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+header {
+  background-color: lawngreen; }
+
+#actividades {
+  background-color: orangered; }
+  #actividades .boxeo {
+    background-color: lightslategray; }
+  #actividades .muay-thai {
+    background-color: aqua; }
+  #actividades .jiu-jitsu {
+    background-color: saddlebrown; }
+  #actividades .mma {
+    background-color: fuchsia; }
+  #actividades .hit {
+    background-color: gold; }
+  #actividades .funcional {
+    background-color: teal; }
+  #actividades .personalizado {
+    background-color: red; }
