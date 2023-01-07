@@ -3,9 +3,16 @@
     margin: 0;
     padding: 0;
 }
+
+@mixin margen {
+    margin: 0.1em 0.2em;
+}
+/* @include margen; */
+    
 a{
     text-decoration: none;
 }
+
 
 header{
     background-color: lawngreen;
@@ -16,7 +23,6 @@ header{
     }
     nav{
         
-
         a{
         
         }
