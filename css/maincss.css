@@ -3,26 +3,115 @@
   margin: 0;
   padding: 0; }
 
-/* @include margen; */
 a {
   text-decoration: none; }
 
-header {
-  background-color: lawngreen; }
+body {
+  background-color: #000000;
+  color: #ffffff; }
 
+/* Navegador/Menu */
+.container-menu, .boton, .nav {
+  position: fixed;
+  width: 100%; }
+
+.container-menu {
+  margin: auto;
+  top: 3%;
+  margin-left: 10px; }
+
+#toggle {
+  display: none; }
+
+.boton {
+  z-index: 999;
+  width: 43px;
+  height: 43px;
+  background: #b55a1a;
+  border-radius: 100%;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 1px 1px 20px 0 #b55a1a;
+  cursor: pointer; }
+
+.boton:before {
+  position: absolute;
+  top: 20px;
+  left: 9px;
+  content: '';
+  width: 25px;
+  height: 2px;
+  background: #fff;
+  transform: rotate(90deg); }
+
+.boton:after {
+  position: absolute;
+  top: 20px;
+  left: 9px;
+  content: '';
+  width: 25px;
+  height: 2px;
+  background: #fff; }
+
+.nav {
+  transform: translateY(-10%);
+  opacity: 0;
+  top: 20px;
+  transition: all 0.5s ease-in-out;
+  background: #d5d5d5;
+  width: 40%;
+  border-radius: 5px;
+  transform: translateY(-100%); }
+
+.nav a {
+  text-align: center;
+  display: block;
+  margin: 20px 0;
+  color: #000000;
+  text-decoration: none;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  transition: all 300ms; }
+  .nav a span {
+    font-style: italic;
+    font-weight: bold;
+    color: #b55a1a;
+    transition: all 300ms; }
+
+.nav a:hover {
+  color: #ffffff;
+  background-color: #b55a1a; }
+  .nav a:hover span {
+    background-color: #ffffff; }
+
+#toggle:checked ~ .nav {
+  opacity: 1;
+  transform: translateY(10%); }
+
+#toggle:checked ~ .boton {
+  transform: rotate(135deg);
+  box-shadow: 0 0 0 0 transparent; }
+
+/* Seccion 1 actividades */
 #actividades {
-  background-color: orangered; }
+  margin-top: 5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em; }
+  #actividades h3 {
+    color: #b55a1a;
+    text-align: center; }
+  #actividades h4 {
+    color: #000000; }
   #actividades .boxeo {
-    background-color: lightslategray; }
-  #actividades .muay-thai {
     background-color: aqua; }
+  #actividades .muay-thai {
+    background-color: brown; }
   #actividades .jiu-jitsu {
-    background-color: saddlebrown; }
+    background-color: cornflowerblue; }
   #actividades .mma {
-    background-color: fuchsia; }
+    background-color: chartreuse; }
   #actividades .hit {
-    background-color: gold; }
+    background-color: crimson; }
   #actividades .funcional {
-    background-color: teal; }
+    background-color: darkolivegreen; }
   #actividades .personalizado {
-    background-color: red; }
+    background-color: dodgerblue; }

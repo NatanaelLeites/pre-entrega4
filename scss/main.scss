@@ -3,135 +3,150 @@
     margin: 0;
     padding: 0;
 }
-
-@mixin margen {
-    margin: 0.1em 0.2em;
-}
-/* @include margen; */
-    
-a{
+a {
     text-decoration: none;
 }
+@mixin margenes {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+$color-principal: #b55a1a;
+
+body{
+    background-color: #000000;
+    color: #ffffff;
+}
 
 
-header{
-    background-color: lawngreen;
+/* Navegador/Menu */
+.container-menu, .boton, .nav{
+    position: fixed;
+    width: 100%;
+}
+
+.container-menu{
+    margin: auto;
+    top: 3%;
+    margin-left: 10px;
     
+}
 
-    #logo{
-        
-    }
-    nav{
-        
-        a{
-        
-        }
+#toggle{
+    display: none;
+}
 
+.boton{
+    z-index: 999;
+    width: 43px;
+    height: 43px;
+    background: $color-principal;
+    border-radius: 100%;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 1px 1px 20px 0 $color-principal;
+    cursor: pointer;
+}
+
+.boton:before{
+    position: absolute;
+    top: 20px;
+    left: 9px;
+    content: '';
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    transform: rotate(90deg);
+}
+
+.boton:after{
+    position: absolute;
+    top: 20px;
+    left: 9px;
+    content: '';
+    width: 25px;
+    height: 2px;
+    background: #fff;
+
+}
+
+.nav{
+    transform: translateY(-10%);
+    opacity: 0;
+    top: 20px;
+    transition: all 0.5s ease-in-out;
+    background: rgb(213, 213, 213);
+    width: 40%;
+    border-radius: 5px;
+    transform: translateY(-100%);
+}
+
+.nav a{
+    text-align: center;
+    display: block;
+    margin: 20px 0;
+    color: #000000;
+    text-decoration: none;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    transition: all 300ms;
+    span{
+        font-style: italic;
+        font-weight: bold;
+        color: $color-principal;
+        transition: all 300ms;
     }
 }
 
+.nav a:hover{
+    color: #ffffff;
+    background-color: $color-principal;
+    span{
+        background-color: #ffffff;
+    }
+}
+
+#toggle:checked ~ .nav{
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+#toggle:checked ~ .boton{
+    transform: rotate(135deg);
+    box-shadow: 0 0 0 0 transparent;
+}
+
+/* Seccion 1 actividades */
+
 #actividades{
-    background-color: orangered;
+    margin-top: 5em;
+    @include margenes();
 
     h3{
-
+        color: $color-principal;
+        text-align: center;
     }
-
+    h4{
+        color: #000000;
+    }
     .boxeo{
-        background-color: lightslategray;
-
-        h4{
-
-        }
-        p{
-
-        }
-        span{
-
-        }
-    }
-
-    .muay-thai{
         background-color: aqua;
 
-        h4{
-
-        }
-        p{
-
-        }
-        span{
-
-        }
     }
-
+    .muay-thai{
+        background-color: brown;
+    }
     .jiu-jitsu{
-        background-color: saddlebrown;
-
-        h4{
-
-        }
-        p{
-
-        }
-        span{
-            
-        }
+        background-color: cornflowerblue;
     }
-
     .mma{
-        background-color: fuchsia;
-
-        h4{
-
-        }
-        p{
-
-        }
-        span{
-            
-        }
+        background-color: chartreuse;
     }
-
     .hit{
-        background-color: gold;
-
-        h4{
-
-        }
-        p{
-
-        }
-        span{
-            
-        }
+        background-color: crimson;
     }
-
     .funcional{
-        background-color: teal;
-
-        h4{
-
-        }
-        p{
-
-        }
-        span{
-            
-        }
+        background-color: darkolivegreen;
     }
-
     .personalizado{
-        background-color: red;
-
-        h4{
-
-        }
-        p{
-
-        }
-        span{
-            
-        }
+        background-color: dodgerblue;
     }
 }
