@@ -6,6 +6,16 @@
 a {
   text-decoration: none; }
 
+h1 {
+  text-align: center;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  color: #b55a1a;
+  text-shadow: 0px 0px 2px black;
+  font-weight: bold;
+  border-bottom: 2px #9f481f;
+  margin: 0; }
+
 h3 {
   color: #b55a1a;
   text-align: center; }
@@ -36,7 +46,6 @@ body {
   background: #b55a1a;
   border-radius: 100%;
   transition: all 0.5s ease-in-out;
-  box-shadow: 1px 1px 20px 0 #b55a1a;
   cursor: pointer; }
 
 .boton:before {
@@ -99,7 +108,7 @@ body {
 
 /* Seccion 1 actividades */
 #actividades {
-  margin-top: 5em;
+  margin-top: 2em;
   margin-left: 0.5em;
   margin-right: 0.5em; }
   #actividades h4 {
