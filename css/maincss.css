@@ -6,12 +6,18 @@
 a {
   text-decoration: none; }
 
+h3 {
+  color: #b55a1a;
+  text-align: center; }
+
 body {
   background-color: #000000;
   color: #ffffff; }
 
 /* Navegador/Menu */
-.container-menu, .boton, .nav {
+.container-menu,
+.boton,
+.nav {
   position: fixed;
   width: 100%; }
 
@@ -96,22 +102,197 @@ body {
   margin-top: 5em;
   margin-left: 0.5em;
   margin-right: 0.5em; }
-  #actividades h3 {
-    color: #b55a1a;
-    text-align: center; }
   #actividades h4 {
-    color: #000000; }
+    color: #3776ff;
+    text-shadow: 0px 0px 2px black; }
+  #actividades span {
+    font-style: italic; }
   #actividades .boxeo {
-    background-color: aqua; }
+    background-color: #3d3d3d;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 0 5px; }
   #actividades .muay-thai {
-    background-color: brown; }
+    background-color: #3d3d3d;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 0 5px; }
   #actividades .jiu-jitsu {
-    background-color: cornflowerblue; }
+    background-color: #3d3d3d;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 0 5px; }
   #actividades .mma {
-    background-color: chartreuse; }
+    background-color: #3d3d3d;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 0 5px; }
   #actividades .hit {
-    background-color: crimson; }
+    background-color: #3d3d3d;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 0 5px; }
   #actividades .funcional {
-    background-color: darkolivegreen; }
+    background-color: #3d3d3d;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 0 5px; }
   #actividades .personalizado {
-    background-color: dodgerblue; }
+    background-color: #3d3d3d;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 0 5px; }
+
+/* Seccion 2 horarios */
+#horarios {
+  margin-left: 0.5em;
+  margin-right: 0.5em; }
+  #horarios strong {
+    color: #3776ff;
+    text-shadow: 0px 0px 2px black; }
+  #horarios .lunes {
+    background-color: #3d3d3d;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 0 5px; }
+  #horarios .martes {
+    background-color: #3d3d3d;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 0 5px; }
+  #horarios .miercoles {
+    background-color: #3d3d3d;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 0 5px; }
+  #horarios .jueves {
+    background-color: #3d3d3d;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 0 5px; }
+  #horarios .viernes {
+    background-color: #3d3d3d;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 0 5px; }
+
+/* Seccion 3 Planes */
+#planes {
+  margin-left: 0.5em;
+  margin-right: 0.5em; }
+  #planes .costos {
+    background-color: #3d3d3d;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 0 5px; }
+
+/* Seccion 4 Novedades */
+#novedades {
+  margin-left: 0.5em;
+  margin-right: 0.5em; }
+  #novedades .nutricion {
+    background-color: #3d3d3d;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 0 5px; }
+  #novedades .yoga {
+    background-color: #3d3d3d;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 0 5px; }
+    #novedades .yoga .enlace {
+      color: #b55a1a;
+      font-style: italic; }
+
+/* Seccion 4 Contacto */
+#contacto {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  display: flex;
+  flex-direction: column; }
+  #contacto .gimnasio {
+    background-color: #9f481f;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 5px;
+    margin-bottom: 5px; }
+  #contacto .emiliano {
+    background-color: #9f481f;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 5px;
+    margin-bottom: 5px; }
+
+button {
+  background-color: #fff;
+  padding: 5px;
+  position: relative;
+  width: 7.2em;
+  height: 2em;
+  transition: 0.5s;
+  font-size: 17px;
+  border-radius: 0.4em; }
+
+button p {
+  position: absolute;
+  top: 0.4em;
+  left: 1.2em;
+  margin: 0;
+  padding: 0;
+  transition: .5s;
+  color: #b55a1a;
+  font-weight: bold; }
+
+button svg {
+  position: absolute;
+  top: 0.45em;
+  right: 0.5em;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: 0.5s;
+  height: 1em;
+  fill: #fff; }
+
+button:hover p {
+  left: 0.6em;
+  color: #fff; }
+
+button:hover svg {
+  opacity: 1; }
+
+button:hover {
+  background-color: #bc2a8d; }
+
+/* Seccion 5 Consejos */
+#consejos {
+  margin-left: 0.5em;
+  margin-right: 0.5em; }
+  #consejos p {
+    background-color: #3d3d3d;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 0 5px; }
+  #consejos strong {
+    color: #3776ff;
+    text-shadow: 0px 0px 2px black; }
+
+/* Footer */
+footer {
+  text-align: center; }
