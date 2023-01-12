@@ -10,7 +10,7 @@ a {
 }
 
 $color-principal: #d25e0b;
-$color-secundario: #000000;
+$color-secundario: #c43f1adc;
 
 @mixin margenes {
     margin-left: 0.5em;
@@ -153,7 +153,7 @@ body {
 
     h4 {
         color: $color-secundario;
-        text-shadow: 0px 0px 1px rgb(255, 255, 255);
+        text-shadow: 0px 0px 1px rgb(0, 0, 0);
     }
 
     span {
@@ -196,7 +196,7 @@ body {
 
     strong {
         color: $color-secundario;
-        text-shadow: 0px 0px 1px rgb(255, 255, 255);
+        text-shadow: 0px 0px 1px rgb(0, 0, 0);
     }
 
     .lunes {
@@ -339,7 +339,7 @@ button:hover {
 
     strong {
         color: $color-secundario;
-        text-shadow: 0px 0px 1px rgb(255, 255, 255);
+        text-shadow: 0px 0px 1px rgb(0, 0, 0);
     }
 }
 

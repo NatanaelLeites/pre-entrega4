@@ -113,8 +113,8 @@ body {
   margin-left: 0.5em;
   margin-right: 0.5em; }
   #actividades h4 {
-    color: #000000;
-    text-shadow: 0px 0px 1px white; }
+    color: #c43f1adc;
+    text-shadow: 0px 0px 1px black; }
   #actividades span {
     font-style: italic; }
   #actividades .boxeo {
@@ -165,8 +165,8 @@ body {
   margin-left: 0.5em;
   margin-right: 0.5em; }
   #horarios strong {
-    color: #000000;
-    text-shadow: 0px 0px 1px white; }
+    color: #c43f1adc;
+    text-shadow: 0px 0px 1px black; }
   #horarios .lunes {
     background-color: #3d3d3d;
     border-radius: 5px;
@@ -304,8 +304,8 @@ button:hover {
     margin-bottom: 5px;
     padding: 0 5px; }
   #consejos strong {
-    color: #000000;
-    text-shadow: 0px 0px 1px white; }
+    color: #c43f1adc;
+    text-shadow: 0px 0px 1px black; }
 
 /* Footer */
 footer {
