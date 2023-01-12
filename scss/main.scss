@@ -217,6 +217,9 @@ body {
     .viernes {
         @include actividades();
     }
+    li{
+        list-style-type: none;
+    }
 }
 
 
@@ -226,6 +229,9 @@ body {
     @include margenes();
     .costos{
         @include actividades();
+    }
+    li{
+        list-style-type: none;
     }
 }
 
