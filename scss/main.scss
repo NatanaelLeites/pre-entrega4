@@ -9,7 +9,8 @@ a {
     text-decoration: none;
 }
 
-$color-principal: #b55a1a;
+$color-principal: #d25e0b;
+$color-secundario: #000000;
 
 @mixin margenes {
     margin-left: 0.5em;
@@ -102,7 +103,7 @@ body {
     top: 20px;
     transition: all 0.5s ease-in-out;
     background: rgb(213, 213, 213);
-    width: 40%;
+    width: 50%;
     border-radius: 5px;
     transform: translateY(-100%);
 }
@@ -151,8 +152,8 @@ body {
     @include margenes();
 
     h4 {
-        color: #3776ff;
-        text-shadow: 0px 0px 2px rgb(0, 0, 0);
+        color: $color-secundario;
+        text-shadow: 0px 0px 1px rgb(255, 255, 255);
     }
 
     span {
@@ -194,8 +195,8 @@ body {
     @include margenes();
 
     strong {
-        color: #3776ff;
-        text-shadow: 0px 0px 2px rgb(0, 0, 0);
+        color: $color-secundario;
+        text-shadow: 0px 0px 1px rgb(255, 255, 255);
     }
 
     .lunes {
@@ -263,7 +264,7 @@ body {
     flex-direction: column;
 
     .gimnasio {
-        background-color: #9f481f;
+        background-color: #414141;
         text-align: center;
         padding: 5px 0;
         border-radius: 5px;
@@ -271,7 +272,7 @@ body {
     }
 
     .emiliano {
-        background-color: #9f481f;
+        background-color: #414141;
         text-align: center;
         padding: 5px 0;
         border-radius: 5px;
@@ -337,8 +338,8 @@ button:hover {
     }
 
     strong {
-        color: #3776ff;
-        text-shadow: 0px 0px 2px rgb(0, 0, 0);
+        color: $color-secundario;
+        text-shadow: 0px 0px 1px rgb(255, 255, 255);
     }
 }
 

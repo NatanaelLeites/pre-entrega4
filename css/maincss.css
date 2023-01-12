@@ -11,14 +11,14 @@ h1 {
   text-align: center;
   margin-left: 0.5em;
   margin-right: 0.5em;
-  color: #b55a1a;
+  color: #d25e0b;
   text-shadow: 0px 0px 2px black;
   font-weight: bold;
   border-bottom: 2px #9f481f;
   margin: 0; }
 
 h3 {
-  color: #b55a1a;
+  color: #d25e0b;
   text-align: center; }
 
 body {
@@ -44,7 +44,7 @@ body {
   z-index: 999;
   width: 43px;
   height: 43px;
-  background: #b55a1a;
+  background: #d25e0b;
   border-radius: 100%;
   transition: all 0.5s ease-in-out;
   cursor: pointer; }
@@ -74,7 +74,7 @@ body {
   top: 20px;
   transition: all 0.5s ease-in-out;
   background: #d5d5d5;
-  width: 40%;
+  width: 50%;
   border-radius: 5px;
   transform: translateY(-100%); }
 
@@ -90,12 +90,12 @@ body {
   .nav a span {
     font-style: italic;
     font-weight: bold;
-    color: #b55a1a;
+    color: #d25e0b;
     transition: all 300ms; }
 
 .nav a:hover {
   color: #ffffff;
-  background-color: #b55a1a; }
+  background-color: #d25e0b; }
   .nav a:hover span {
     background-color: #ffffff; }
 
@@ -113,8 +113,8 @@ body {
   margin-left: 0.5em;
   margin-right: 0.5em; }
   #actividades h4 {
-    color: #3776ff;
-    text-shadow: 0px 0px 2px black; }
+    color: #000000;
+    text-shadow: 0px 0px 1px white; }
   #actividades span {
     font-style: italic; }
   #actividades .boxeo {
@@ -165,8 +165,8 @@ body {
   margin-left: 0.5em;
   margin-right: 0.5em; }
   #horarios strong {
-    color: #3776ff;
-    text-shadow: 0px 0px 2px black; }
+    color: #000000;
+    text-shadow: 0px 0px 1px white; }
   #horarios .lunes {
     background-color: #3d3d3d;
     border-radius: 5px;
@@ -230,7 +230,7 @@ body {
     margin-bottom: 5px;
     padding: 0 5px; }
     #novedades .yoga .enlace {
-      color: #b55a1a;
+      color: #d25e0b;
       font-style: italic; }
 
 /* Seccion 4 Contacto */
@@ -240,13 +240,13 @@ body {
   display: flex;
   flex-direction: column; }
   #contacto .gimnasio {
-    background-color: #9f481f;
+    background-color: #414141;
     text-align: center;
     padding: 5px 0;
     border-radius: 5px;
     margin-bottom: 5px; }
   #contacto .emiliano {
-    background-color: #9f481f;
+    background-color: #414141;
     text-align: center;
     padding: 5px 0;
     border-radius: 5px;
@@ -269,7 +269,7 @@ button p {
   margin: 0;
   padding: 0;
   transition: .5s;
-  color: #b55a1a;
+  color: #d25e0b;
   font-weight: bold; }
 
 button svg {
@@ -304,8 +304,8 @@ button:hover {
     margin-bottom: 5px;
     padding: 0 5px; }
   #consejos strong {
-    color: #3776ff;
-    text-shadow: 0px 0px 2px black; }
+    color: #000000;
+    text-shadow: 0px 0px 1px white; }
 
 /* Footer */
 footer {
