@@ -1,312 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap");
+/* RESET =================*/
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif; }
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  outline: none;
+  border: none; }
+
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block; }
 
 a {
-  text-decoration: none; }
-
-h1 {
-  text-align: center;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  color: #d25e0b;
-  text-shadow: 0px 0px 2px black;
-  font-weight: bold;
-  border-bottom: 2px #9f481f;
-  margin: 0; }
-
-h3 {
-  color: #d25e0b;
-  text-align: center; }
-
-body {
-  background-color: #000000;
-  color: #ffffff; }
-
-/* Navegador/Menu */
-.container-menu,
-.boton,
-.nav {
-  position: fixed;
-  width: 100%; }
-
-.container-menu {
-  margin: auto;
-  top: 3%;
-  margin-left: 10px; }
-
-#toggle {
-  display: none; }
-
-.boton {
-  z-index: 999;
-  width: 43px;
-  height: 43px;
-  background: #d25e0b;
-  border-radius: 100%;
-  transition: all 0.5s ease-in-out;
-  cursor: pointer; }
-
-.boton:before {
-  position: absolute;
-  top: 20px;
-  left: 9px;
-  content: '';
-  width: 25px;
-  height: 2px;
-  background: #fff;
-  transform: rotate(90deg); }
-
-.boton:after {
-  position: absolute;
-  top: 20px;
-  left: 9px;
-  content: '';
-  width: 25px;
-  height: 2px;
-  background: #fff; }
-
-.nav {
-  transform: translateY(-10%);
-  opacity: 0;
-  top: 20px;
-  transition: all 0.5s ease-in-out;
-  background: #d5d5d5;
-  width: 50%;
-  border-radius: 5px;
-  transform: translateY(-100%); }
-
-.nav a {
-  text-align: center;
-  display: block;
-  margin: 20px 0;
-  color: #000000;
   text-decoration: none;
-  font-family: sans-serif;
-  letter-spacing: 2px;
-  transition: all 300ms; }
-  .nav a span {
-    font-style: italic;
-    font-weight: bold;
-    color: #d25e0b;
-    transition: all 300ms; }
+  color: inherit; }
 
-.nav a:hover {
-  color: #ffffff;
-  background-color: #d25e0b; }
-  .nav a:hover span {
-    background-color: #ffffff; }
+li {
+  list-style-type: none; }
 
-#toggle:checked ~ .nav {
-  opacity: 1;
-  transform: translateY(10%); }
+html {
+  scroll-behavior: smooth; }
 
-#toggle:checked ~ .boton {
-  transform: rotate(135deg);
-  box-shadow: 0 0 0 0 transparent; }
+svg {
+  width: 100%;
+  display: block; }
 
-/* Seccion 1 actividades */
-#actividades {
-  margin-top: 2em;
-  margin-left: 0.5em;
-  margin-right: 0.5em; }
-  #actividades h4 {
-    color: #c43f1adc;
-    text-shadow: 0px 0px 1px black; }
-  #actividades span {
-    font-style: italic; }
-  #actividades .boxeo {
-    background-color: #3d3d3d;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 5px;
-    padding: 0 5px; }
-  #actividades .muay-thai {
-    background-color: #3d3d3d;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 5px;
-    padding: 0 5px; }
-  #actividades .jiu-jitsu {
-    background-color: #3d3d3d;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 5px;
-    padding: 0 5px; }
-  #actividades .mma {
-    background-color: #3d3d3d;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 5px;
-    padding: 0 5px; }
-  #actividades .hit {
-    background-color: #3d3d3d;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 5px;
-    padding: 0 5px; }
-  #actividades .funcional {
-    background-color: #3d3d3d;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 5px;
-    padding: 0 5px; }
-  #actividades .personalizado {
-    background-color: #3d3d3d;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 5px;
-    padding: 0 5px; }
+::selection {
+  color: #064384;
+  background-color: #a1a1a1; }
 
-/* Seccion 2 horarios */
-#horarios {
-  margin-left: 0.5em;
-  margin-right: 0.5em; }
-  #horarios strong {
-    color: #c43f1adc;
-    text-shadow: 0px 0px 1px black; }
-  #horarios .lunes {
-    background-color: #3d3d3d;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 5px;
-    padding: 0 5px; }
-  #horarios .martes {
-    background-color: #3d3d3d;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 5px;
-    padding: 0 5px; }
-  #horarios .miercoles {
-    background-color: #3d3d3d;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 5px;
-    padding: 0 5px; }
-  #horarios .jueves {
-    background-color: #3d3d3d;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 5px;
-    padding: 0 5px; }
-  #horarios .viernes {
-    background-color: #3d3d3d;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 5px;
-    padding: 0 5px; }
-  #horarios li {
-    list-style-type: none; }
-
-/* Seccion 3 Planes */
-#planes {
-  margin-left: 0.5em;
-  margin-right: 0.5em; }
-  #planes .costos {
-    background-color: #3d3d3d;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 5px;
-    padding: 0 5px; }
-  #planes li {
-    list-style-type: none; }
-
-/* Seccion 4 Novedades */
-#novedades {
-  margin-left: 0.5em;
-  margin-right: 0.5em; }
-  #novedades .nutricion {
-    background-color: #3d3d3d;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 5px;
-    padding: 0 5px; }
-  #novedades .yoga {
-    background-color: #3d3d3d;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 5px;
-    padding: 0 5px; }
-    #novedades .yoga .enlace {
-      color: #d25e0b;
-      font-style: italic; }
-
-/* Seccion 4 Contacto */
-#contacto {
-  margin-left: 0.5em;
-  margin-right: 0.5em;
+/* header============= */
+header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: white;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 1.6rem 9%;
   display: flex;
-  flex-direction: column; }
-  #contacto .gimnasio {
-    background-color: #414141;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 5px;
-    margin-bottom: 5px; }
-  #contacto .emiliano {
-    background-color: #414141;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 5px;
-    margin-bottom: 5px; }
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000; }
+  header input {
+    display: none; }
+  header label {
+    font-size: 2rem;
+    color: #064384;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0; }
+  header .logo {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #064384; }
+  header .navegador a {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    color: #064384; }
+  header .navegador a:hover {
+    color: #a1a1a1; }
 
-button {
-  background-color: #fff;
-  padding: 5px;
+@media (max-width: 1200px) {
+  font-size: 55%; }
+
+@media (max-width: 768px) {
+  header label {
+    visibility: visible;
+    opacity: 1; }
+  header .navegador {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1rem 2rem;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0; }
+    header .navegador a {
+      display: block;
+      margin: 2rem 0;
+      font-size: 2rem; }
+  header input:checked ~ .navegador {
+    transform: scaleY(1);
+    opacity: 1; }
+  header input:checked ~ label::before {
+    content: '\f00d'; } }
+
+@media (max-width: 450px) {
+  body {
+    font-size: 49%; } }
+
+/* actividades============ */
+#actividades {
+  margin-top: 50vh; }
+
+/* Boton volver al inicio ====== */
+.back-top {
+  width: 140px;
+  height: 56px;
+  overflow: hidden;
+  border: none;
+  color: #000000;
+  background: none;
   position: relative;
-  width: 7.2em;
-  height: 2em;
-  transition: 0.5s;
+  padding-bottom: 2em; }
+
+.back-top > div,
+.back-top > .top-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex; }
+
+.back-top:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  background: currentColor;
+  transition: transform 0.25s ease-out; }
+
+.back-top:hover:before {
+  transform: scaleX(1);
+  transform-origin: bottom left; }
+
+.back-top .clone > *,
+.back-top .text > * {
+  opacity: 1;
+  font-size: 1.3rem;
+  transition: 0.2s;
+  margin-left: 4px; }
+
+.back-top .clone > * {
+  transform: translateY(60px); }
+
+.back-top:hover .clone > * {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s; }
+
+.back-top:hover .text > * {
+  opacity: 1;
+  transform: translateY(-60px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s; }
+
+.back-top:hover .clone > :nth-child(1) {
+  transition-delay: 0.15s; }
+
+.back-top:hover .clone > :nth-child(2) {
+  transition-delay: 0.2s; }
+
+.back-top:hover .clone > :nth-child(3) {
+  transition-delay: 0.25s; }
+
+.back-top:hover .clone > :nth-child(4) {
+  transition-delay: 0.3s; }
+
+.back-top .top-back {
+  width: 20px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-50deg);
+  transition: 0.2s ease-out; }
+
+.back-top:hover svg {
+  transform: translateY(-50%) rotate(-90deg); }
+
+/* contacto============= */
+.btn {
+  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+  --border-width: .125em;
+  --curve-size: .5em;
+  --blur: 30px;
+  --bg: #080312;
+  --color: #afffff;
+  color: var(--color);
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: .5em 1.5em;
   font-size: 17px;
-  border-radius: 0.4em; }
+  border: 0;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+  clip-path: polygon(0% var(--curve-size), var(--curve-size) 0, 100% 0, 100% calc(100% - var(--curve-size)), calc(100% - var(--curve-size)) 100%, 0 100%);
+  transition: color 250ms; }
 
-button p {
+.btn::after,
+.btn::before {
+  content: '';
   position: absolute;
-  top: 0.4em;
-  left: 1.2em;
-  margin: 0;
-  padding: 0;
-  transition: .5s;
-  color: #d25e0b;
-  font-weight: bold; }
+  inset: 0; }
 
-button svg {
-  position: absolute;
-  top: 0.45em;
-  right: 0.5em;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
-  transition: 0.5s;
-  height: 1em;
-  fill: #fff; }
+.btn::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 1.5s ease infinite;
+  z-index: -2; }
 
-button:hover p {
-  left: 0.6em;
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%; }
+  50% {
+    background-position: 70% 100%; }
+  100% {
+    background-position: 31% 0%; } }
+
+.btn::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(var(--border-width) calc(var(--curve-size) + var(--border-width) * .5), calc(var(--curve-size) + var(--border-width) * .5) var(--border-width), calc(100% - var(--border-width)) var(--border-width), calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * .5)), calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)), var(--border-width) calc(100% - var(--border-width)));
+  transition: clip-path 500ms; }
+
+.btn:where(:hover, :focus)::after {
+  clip-path: polygon(calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)), calc(100% - var(--border-width)) var(--border-width), calc(100% - var(--border-width)) var(--border-width), calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * .5)), calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)), calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)));
+  transition: 200ms; }
+
+.btn:where(:hover, :focus) {
   color: #fff; }
-
-button:hover svg {
-  opacity: 1; }
-
-button:hover {
-  background-color: #bc2a8d; }
-
-/* Seccion 5 Consejos */
-#consejos {
-  margin-left: 0.5em;
-  margin-right: 0.5em; }
-  #consejos p {
-    background-color: #3d3d3d;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 5px;
-    padding: 0 5px; }
-  #consejos strong {
-    color: #c43f1adc;
-    text-shadow: 0px 0px 1px black; }
-
-/* Footer */
-footer {
-  text-align: center; }

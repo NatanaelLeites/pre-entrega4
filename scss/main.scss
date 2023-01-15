@@ -1,349 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap');
+
+$color-principal: #064384;
+$color-secundario: #a1a1a1;
+
+/* RESET =================*/
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  outline: none;
+  border: none;
+}
+
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: inherit;
 }
 
-$color-principal: #d25e0b;
-$color-secundario: #c43f1adc;
-
-@mixin margenes {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+li {
+  list-style-type: none;
 }
 
-@mixin actividades {
-    background-color: #3d3d3d;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 5px;
-    padding: 0 5px;
+html {
+  scroll-behavior: smooth;
 }
 
-h1{
-    text-align: center;
-    @include margenes();
-    color: $color-principal;
-    text-shadow: 0px 0px 2px black;
-    font-weight: bold;
-    border-bottom: 2px #9f481f;
-    margin: 0;
+svg {
+  width: 100%;
+  display: block;
 }
 
-h3 {
-    color: $color-principal;
-    text-align: center;
+::selection {
+  color: $color-principal;
+  background-color: $color-secundario;
 }
 
-body {
-    background-color: #000000;
-    color: #ffffff;
-}
-
-
-/* Navegador/Menu */
-.container-menu,
-.boton,
-.nav {
-    position: fixed;
-    width: 100%;
-}
-
-.container-menu {
-    margin: auto;
-    top: 3%;
-    margin-left: 10px;
-
-}
-
-#toggle {
+/* header============= */
+header{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: white;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  padding: 1.6rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  input{
     display: none;
-}
-
-.boton {
-    z-index: 999;
-    width: 43px;
-    height: 43px;
-    background: $color-principal;
-    border-radius: 100%;
-    transition: all 0.5s ease-in-out;
-    cursor: pointer;
-}
-
-.boton:before {
-    position: absolute;
-    top: 20px;
-    left: 9px;
-    content: '';
-    width: 25px;
-    height: 2px;
-    background: #fff;
-    transform: rotate(90deg);
-}
-
-.boton:after {
-    position: absolute;
-    top: 20px;
-    left: 9px;
-    content: '';
-    width: 25px;
-    height: 2px;
-    background: #fff;
-
-}
-
-.nav {
-    transform: translateY(-10%);
-    opacity: 0;
-    top: 20px;
-    transition: all 0.5s ease-in-out;
-    background: rgb(213, 213, 213);
-    width: 50%;
-    border-radius: 5px;
-    transform: translateY(-100%);
-}
-
-.nav a {
-    text-align: center;
-    display: block;
-    margin: 20px 0;
-    color: #000000;
-    text-decoration: none;
-    font-family: sans-serif;
-    letter-spacing: 2px;
-    transition: all 300ms;
-
-    span {
-        font-style: italic;
-        font-weight: bold;
-        color: $color-principal;
-        transition: all 300ms;
-    }
-}
-
-.nav a:hover {
-    color: #ffffff;
-    background-color: $color-principal;
-
-    span {
-        background-color: #ffffff;
-    }
-}
-
-#toggle:checked~.nav {
-    opacity: 1;
-    transform: translateY(10%);
-}
-
-#toggle:checked~.boton {
-    transform: rotate(135deg);
-    box-shadow: 0 0 0 0 transparent;
-}
-
-/* Seccion 1 actividades */
-
-#actividades {
-    margin-top: 2em;
-    @include margenes();
-
-    h4 {
-        color: $color-secundario;
-        text-shadow: 0px 0px 1px rgb(0, 0, 0);
-    }
-
-    span {
-        font-style: italic;
-    }
-
-    .boxeo {
-        @include actividades();
-    }
-
-    .muay-thai {
-        @include actividades();
-    }
-
-    .jiu-jitsu {
-        @include actividades();
-    }
-
-    .mma {
-        @include actividades();
-    }
-
-    .hit {
-        @include actividades();
-    }
-
-    .funcional {
-        @include actividades();
-    }
-
-    .personalizado {
-        @include actividades();
-    }
-}
-
-/* Seccion 2 horarios */
-
-#horarios {
-    @include margenes();
-
-    strong {
-        color: $color-secundario;
-        text-shadow: 0px 0px 1px rgb(0, 0, 0);
-    }
-
-    .lunes {
-        @include actividades();
-    }
-
-    .martes {
-        @include actividades();
-    }
-
-    .miercoles {
-        @include actividades();
-    }
-
-    .jueves {
-        @include actividades();
-    }
-
-    .viernes {
-        @include actividades();
-    }
-    li{
-        list-style-type: none;
-    }
-}
-
-
-/* Seccion 3 Planes */
-
-#planes {
-    @include margenes();
-    .costos{
-        @include actividades();
-    }
-    li{
-        list-style-type: none;
-    }
-}
-
-
-/* Seccion 4 Novedades */
-
-#novedades {
-    @include margenes();
-
-    .nutricion {
-        @include actividades();
-    }
-
-    .yoga {
-        @include actividades();
-
-        .enlace {
-            color: $color-principal;
-            font-style: italic;
-        }
-    }
-}
-
-
-/* Seccion 4 Contacto */
-#contacto {
-    @include margenes();
-    display: flex;
-    flex-direction: column;
-
-    .gimnasio {
-        background-color: #414141;
-        text-align: center;
-        padding: 5px 0;
-        border-radius: 5px;
-        margin-bottom: 5px;
-    }
-
-    .emiliano {
-        background-color: #414141;
-        text-align: center;
-        padding: 5px 0;
-        border-radius: 5px;
-        margin-bottom: 5px;
-    }
-
-}
-
-button {
-    background-color: #fff;
-    padding: 5px;
-    position: relative;
-    width: 7.2em;
-    height: 2em;
-    transition: 0.5s;
-    font-size: 17px;
-    border-radius: 0.4em;
-}
-
-button p {
-    position: absolute;
-    top: 0.4em;
-    left: 1.2em;
-    margin: 0;
-    padding: 0;
-    transition: .5s;
+  }
+  label{
+    font-size: 2rem;
     color: $color-principal;
-    font-weight: bold;
-}
-
-button svg {
-    position: absolute;
-    top: 0.45em;
-    right: 0.5em;
-    margin: 0;
-    padding: 0;
+    cursor: pointer;
+    visibility: hidden;
     opacity: 0;
-    transition: 0.5s;
-    height: 1em;
-    fill: #fff
+  }
+
+  .logo{
+    font-size: 2rem;
+    font-weight: 500;
+    color: $color-principal;
+  }
+  .navegador{
+    a{
+      font-size: 1.2rem;
+      margin-left: 2rem;
+      color: $color-principal;
+    }
+    a:hover{
+      color: $color-secundario;
+    }
+  }
 }
 
-button:hover p {
-    left: 0.6em;
-    color: #fff
+@media(max-width:1200px){
+  font-size: 55%;
 }
+@media(max-width:768px){
+  header{
+    label{
+      visibility: visible;
+      opacity: 1;
+    }
+    .navegador{
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      padding: 1rem 2rem;
+      border-top: .1rem solid rgba(0, 0, 0, .2);
+      box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+      transform-origin: top;
+      transform: scaleY(0);
+      opacity: 0;
 
-button:hover svg {
-    opacity: 1;
-}
+      a{
+        display: block;
+        margin: 2rem 0;
+        font-size: 2rem;
+      }
 
-button:hover {
-    background-color: #bc2a8d;
-}
-
-/* Seccion 5 Consejos */
-
-#consejos {
-    @include margenes();
-
-    p {
-        @include actividades();
+    }
+    input:checked ~ .navegador{
+      transform: scaleY(1);
+      opacity: 1;
+    }
+    input:checked ~ label::before{
+      content: '\f00d';
     }
 
-    strong {
-        color: $color-secundario;
-        text-shadow: 0px 0px 1px rgb(0, 0, 0);
     }
+  }
+
+@media(max-width:450px){
+  body{
+    font-size: 49%;
+  }
+}
+/* actividades============ */
+#actividades{
+  margin-top: 50vh;
+}
+/* Boton volver al inicio ====== */
+
+.back-top {
+  width: 140px;
+  height: 56px;
+  overflow: hidden;
+  border: none;
+  color: #000000;
+  background: none;
+  position: relative;
+  padding-bottom: 2em;
 }
 
-/* Footer */
-footer {
-    text-align: center;
+.back-top>div,
+.back-top>.top-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.back-top:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  background: currentColor;
+  transition: transform 0.25s ease-out;
+}
+
+.back-top:hover:before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.back-top .clone>*,
+.back-top .text>* {
+  opacity: 1;
+  font-size: 1.3rem;
+  transition: 0.2s;
+  margin-left: 4px;
+}
+
+.back-top .clone>* {
+  transform: translateY(60px);
+}
+
+.back-top:hover .clone>* {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+.back-top:hover .text>* {
+  opacity: 1;
+  transform: translateY(-60px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+.back-top:hover .clone> :nth-child(1) {
+  transition-delay: 0.15s;
+}
+
+.back-top:hover .clone> :nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.back-top:hover .clone> :nth-child(3) {
+  transition-delay: 0.25s;
+}
+
+.back-top:hover .clone> :nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.back-top .top-back {
+  width: 20px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-50deg);
+  transition: 0.2s ease-out;
+}
+
+.back-top:hover svg {
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+
+/* contacto============= */
+.btn {
+  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+  --border-width: .125em;
+  --curve-size: .5em;
+  --blur: 30px;
+  --bg: #080312;
+  --color: #afffff;
+  color: var(--color);
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: .5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
+  clip-path: polygon(
+      /* Top-left */
+      0% var(--curve-size),
+
+      var(--curve-size) 0,
+      /* top-right */
+      100% 0,
+      100% calc(100% - var(--curve-size)),
+
+      /* bottom-right 1 */
+      calc(100% - var(--curve-size)) 100%,
+      /* bottom-right 2 */
+      0 100%);
+  transition: color 250ms;
+}
+
+.btn::after,
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.btn::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 1.5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%
+  }
+
+  50% {
+    background-position: 70% 100%
+  }
+
+  100% {
+    background-position: 31% 0%
+  }
+}
+
+.btn::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+      /* Top-left */
+      var(--border-width) calc(var(--curve-size) + var(--border-width) * .5),
+
+      calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
+
+      /* top-right */
+      calc(100% - var(--border-width)) var(--border-width),
+
+      calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+
+      /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+      /* bottom-right 2 */
+      var(--border-width) calc(100% - var(--border-width)));
+  transition: clip-path 500ms;
+}
+
+.btn:where(:hover, :focus)::after {
+  clip-path: polygon(
+      /* Top-left */
+      calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+
+      calc(100% - var(--border-width)) var(--border-width),
+
+      /* top-right */
+      calc(100% - var(--border-width)) var(--border-width),
+
+      calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+
+      /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+
+      /* bottom-right 2 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)));
+  transition: 200ms;
+}
+
+.btn:where(:hover, :focus) {
+  color: #fff;
 }
