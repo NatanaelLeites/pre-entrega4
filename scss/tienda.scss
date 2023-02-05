@@ -1,0 +1,109 @@
+body{
+    background-color: rgb(20, 20, 20);
+}
+header {
+    #logo {
+        font-size: 2.7em;
+        color: #b33600;
+        font-weight: bold;
+        text-shadow: 2px 2px 10px rgb(0, 0, 0);
+    }
+}
+
+/*bloque de main.js*/
+#buscador{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    font-size: 2em;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px black;
+    background-color: #b33600;
+    color: white;
+}
+.h2Buscador{
+    margin-top: 6rem;
+    margin-left: 2.5rem;
+    font-size: 2.5em;
+    color: #b33600;
+    text-shadow: 2px 2px 2px black;
+}
+#contenedor-productos{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+h3{
+    display: inline;
+    color: #b33600;
+    text-shadow: 2px 2px 10px black;
+    font-size: 2em;
+}
+.producto{
+    width: 200px;
+    height: 350px;
+    padding: 1em;
+    margin: 2rem;
+    border-radius: 2rem;
+}
+.producto:hover{
+    box-shadow: 2px 2px 30px rgba(115, 176, 255, 0.824);
+    transition: .3s;
+}
+img{
+    height: 150px;
+    width: 150px;
+    border-radius: 10rem;
+    margin: 0.5em;
+}
+.boton{
+    border-radius: 1rem;
+    margin: 1em 1.5em;
+    height: 2rem;
+    width: 7rem;
+    font-weight: bold;
+}
+.boton:hover{
+    background-color: #b33600;
+    color: white;
+    transition: .3s;
+}
+#contenedorCarrito{
+    margin: 10px 5vw;
+    width: 90vw;
+    border: 2px solid white;
+    box-shadow: 2px 2px 10px rgb(2, 90, 134);
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+#contenedorCarrito p{
+    margin: 1rem;
+
+}
+.flex{
+    margin: 1rem;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+#total{
+    text-align: end;
+    margin: 2.5rem;
+}
+#comprar{
+    border-radius: 5px;
+    margin: 10px 2.5rem;
+    font-size: 2em;
+    width: 20rem;
+    height: 3rem;
+}
+#comprar:hover{
+    background-color: #b33600;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    transition: .3s;
+}
+.footer{
+    margin-top: 100px;
+}
