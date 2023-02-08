@@ -1,3 +1,4 @@
+
 body{
     background-color: rgb(20, 20, 20);
 }
@@ -71,8 +72,8 @@ img{
 #contenedorCarrito{
     margin: 10px 5vw;
     width: 90vw;
-    border: 2px solid white;
     box-shadow: 2px 2px 10px rgb(2, 90, 134);
+    border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
     
@@ -107,3 +108,4 @@ img{
 .footer{
     margin-top: 100px;
 }
+

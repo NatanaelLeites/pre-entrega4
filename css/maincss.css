@@ -389,8 +389,8 @@ img {
 #contenedorCarrito {
   margin: 10px 5vw;
   width: 90vw;
-  border: 2px solid white;
   box-shadow: 2px 2px 10px #025a86;
+  border-radius: 5px;
   display: flex;
   flex-wrap: wrap; }
 
