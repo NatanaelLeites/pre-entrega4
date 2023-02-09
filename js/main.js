@@ -58,11 +58,14 @@ function renderizarProductos(arrayDeProductos) {
     }
 }
 function agregarAlCarrito (e) {
-    Swal.fire ({
-        text: "Agregado correctamente",
-        icon: "success",
-        confirmButtonText: "Ok!"
-    })
+    Toastify({
+        text: "Agregado correctamente!",
+        duration: 2000,
+        style: {
+            background: "linear-gradient(to right, #5d1c00, #b33600)",
+          },
+        }).showToast();
+
     let productoBuscado = productos.find(producto => producto.id == e.target.id)
     let posicionDelProductoBuscado = carrito.findIndex(producto => producto.id == productoBuscado.id)
 
@@ -96,14 +99,20 @@ function renderizarCarrito (arrayDeProductos){
 
 let botonComprar = document.getElementById("comprar")
 botonComprar.addEventListener("click", () => {
-    Swal.fire({
-        position: 'bottom-end',
-        icon: 'success',
-        title: 'Gracias por su compra',
-        showConfirmButton: false,
-        timer: 1500
-      })
+    carrito.length === 0
+    ? alertas("El carrito está vacío!", "info", "1000")
+    : alertas("Gracias por su compra!", "success", "1000")
+    
     localStorage.removeItem("carrito")
     carrito = []
     renderizarCarrito([carrito])
 })
+
+function alertas (texto, icono, tiempo) {
+    Swal.fire({
+        title: texto,
+        icon: icono,
+        timer: tiempo,
+        showConfirmButton: false
+      })
+}
