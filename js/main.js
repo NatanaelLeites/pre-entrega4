@@ -1,18 +1,8 @@
+fetch("../productos.json")
+    .then(response => response.json())
+    .then(productos => miPrograma(productos))
 
-let productos = [
-    { id: 1, nombre: "Pelota", categoria: "accesorios", precio: 1200, stock: 10, imgRuta: "https://f.fcdn.app/imgs/a540da/www.lacancha.uy/lcanuy/ce1a/original/catalogo/HE3771_HE3771_1/800x800/pelota-de-futbol-uefa-champions-league-league-pelota-de-futbol-uefa-champions-league-league.jpg" },
-    { id: 2, nombre: "Short", categoria: "ropa", precio: 850, stock: 15, imgRuta: "https://d3ugyf2ht6aenh.cloudfront.net/stores/861/003/products/short_futbol_rojo1-7c5d087f9a14729e4c15856845438109-1024-1024.jpg" },
-    { id: 3, nombre: "Medias", categoria: "ropa", precio: 400, stock: 42, imgRuta: "https://f.fcdn.app/imgs/d278f6/www.bas.com.uy/bas/afe7/original/catalogo/S2223W72Negro1/600x900/media-tobillera-x3-negro.jpg" },
-    { id: 4, nombre: "Zapatos", categoria: "calzado", precio: 3200, stock: 18, imgRuta: "https://cf.shopee.com.mx/file/7773bed55a76c4a511b93505df05e9c0_tn" },
-    { id: 5, nombre: "vendas", categoria: "accesorios", precio: 100, stock: 120, imgRuta: "https://previews.123rf.com/images/kampolg/kampolg1404/kampolg140400003/27712364-vendas-el%C3%A1sticas-azules.jpg" },
-    {id: 6, nombre: "Almohadilla para barra", categoria: "accesorios", precio: 356, stock: 21, imgRuta: "https://http2.mlstatic.com/D_NQ_NP_2X_779974-MLU32167510812_092019-F.webp"},
-    { id: 7, nombre: "Colchoneta Yoga", categoria: "accesorios", precio: 490, stock: 10, imgRuta: "https://http2.mlstatic.com/D_NQ_NP_881352-MLU42940949272_072020-O.webp" },
-    { id: 8, nombre: "Guantes de entrenamiento", categoria: "accesorios", precio: 690, stock: 11, imgRuta: "https://http2.mlstatic.com/D_NQ_NP_885053-MLU44811673440_022021-O.webp" },
-    { id: 9, nombre: "Bolso Reebok", categoria: "accesorios", precio: 2039, stock: 7, imgRuta: "https://http2.mlstatic.com/D_NQ_NP_656311-MLU51757923723_092022-O.webp" },
-    { id: 10, nombre: "Guantes de entrenamiento", categoria: "ropa", precio: 1450, stock: 3, imgRuta: "https://http2.mlstatic.com/D_NQ_NP_844473-MLU53347544735_012023-O.webp" },
-    { id: 11, nombre: "Musculosa Soft fem.", categoria: "ropa", precio: 590, stock: 11, imgRuta: "https://http2.mlstatic.com/D_NQ_NP_643911-MLU53339754560_012023-O.webp" },
-    { id: 12, nombre: "Cuerda de salto", categoria: "accesorio", precio: 250, stock: 18, imgRuta: "https://http2.mlstatic.com/D_NQ_NP_930527-MLU52992498175_122022-O.webp" }
-]
+function miPrograma(productos) { 
 
 let contenedorCarrito = document.getElementById("contenedorCarrito")
 
@@ -100,7 +90,7 @@ function renderizarCarrito (arrayDeProductos){
 let botonComprar = document.getElementById("comprar")
 botonComprar.addEventListener("click", () => {
     carrito.length === 0
-    ? alertas("El carrito está vacío!", "info", "1000")
+    ? alertas("Carrito vacío!", "info", "1000")
     : alertas("Gracias por su compra!", "success", "1000")
     
     localStorage.removeItem("carrito")
@@ -115,4 +105,5 @@ function alertas (texto, icono, tiempo) {
         timer: tiempo,
         showConfirmButton: false
       })
+}
 }
